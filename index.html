@@ -4,48 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dandi Gaye Camara – Développeur Web Junior</title>
-<meta name="description" content="Développeur web junior à Nouakchott. React, Node.js, Express, MongoDB.">
+<meta name="description" content="Développeur web junior et support technique à Nouakchott. HTML, CSS, JavaScript, PHP, MySQL, MongoDB.">
 <style>
-  :root {
-    --sable: #f3ead7;
-    --encre: #1b2a22;
-    --vert: #0d5c3a;
-    --or: #c9962b;
-    --texte: #2a3a31;
-    --carte: #fbf6ea;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: "Segoe UI", system-ui, sans-serif; background: var(--sable); color: var(--texte); line-height: 1.6; }
-  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--or); outline-offset: 3px; }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px; }
+  :root { --sable:#f3ead7; --encre:#1b2a22; --vert:#0d5c3a; --or:#c9962b; --texte:#2a3a31; --carte:#fbf6ea; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:"Segoe UI",system-ui,sans-serif; background:var(--sable); color:var(--texte); line-height:1.6; }
+  a:focus-visible,.btn:focus-visible { outline:3px solid var(--or); outline-offset:3px; }
+  .wrap { max-width:880px; margin:0 auto; padding:0 22px; }
 
-  header { background: var(--vert); color: #fff; padding: 72px 0 64px; border-bottom: 8px solid var(--or); }
-  header h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.4rem, 8vw, 4.2rem); line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; }
-  header p.titre { margin-top: 14px; font-size: 1.15rem; color: #f3ead7; }
-  header p.lieu { margin-top: 4px; color: #cfe3d6; }
-  .actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn { display: inline-block; padding: 12px 22px; border-radius: 6px; font-weight: 600; text-decoration: none; }
-  .btn.plein { background: var(--or); color: var(--encre); }
-  .btn.vide { border: 2px solid #f3ead7; color: #fff; }
+  header { background:var(--vert); color:#fff; padding:72px 0 64px; border-bottom:8px solid var(--or); }
+  header h1 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(2.4rem,8vw,4.2rem); line-height:1.05; letter-spacing:-0.02em; }
+  header .titre { margin-top:14px; font-size:1.15rem; color:#f3ead7; }
+  header .lieu { margin-top:4px; color:#cfe3d6; }
+  .actions { margin-top:30px; display:flex; flex-wrap:wrap; gap:12px; }
+  .btn { display:inline-block; padding:12px 22px; border-radius:6px; font-weight:600; text-decoration:none; }
+  .btn.plein { background:var(--or); color:var(--encre); }
+  .btn.vide { border:2px solid #f3ead7; color:#fff; }
+  .btn.vert { border:2px solid var(--vert); color:var(--vert); }
 
-  section { padding: 56px 0 0; }
-  h2 { font-family: Georgia, serif; font-size: 1.8rem; color: var(--encre); margin-bottom: 18px; }
-  .propos p { max-width: 62ch; }
+  section { padding:56px 0 0; }
+  h2 { font-family:Georgia,serif; font-size:1.8rem; color:var(--encre); margin-bottom:18px; }
+  .propos p { max-width:62ch; }
 
-  .projets { display: grid; gap: 20px; }
-  .projet { background: var(--carte); border-left: 6px solid var(--vert); padding: 22px; border-radius: 4px; }
-  .projet h3 { font-size: 1.25rem; color: var(--encre); }
-  .projet p { margin: 8px 0 12px; max-width: 62ch; }
-  .tech { font-size: .9rem; color: var(--vert); font-weight: 600; }
-  .liens { margin-top: 12px; display: flex; gap: 18px; flex-wrap: wrap; }
-  .liens a { color: var(--vert); font-weight: 600; }
+  .poste { background:var(--carte); border-left:6px solid var(--vert); padding:22px; border-radius:4px; margin-bottom:20px; }
+  .poste h3 { font-size:1.2rem; color:var(--encre); }
+  .poste .meta { color:var(--vert); font-weight:600; font-size:.92rem; margin:4px 0 10px; }
+  .poste ul { padding-left:20px; max-width:66ch; }
+  .poste li { margin-bottom:4px; }
 
-  .competences { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
-  .competences li { background: var(--encre); color: var(--sable); padding: 6px 14px; border-radius: 20px; font-size: .95rem; }
+  .competences { display:grid; gap:18px; }
+  .groupe h3 { font-size:1.05rem; color:var(--encre); margin-bottom:8px; }
+  .groupe ul { display:flex; flex-wrap:wrap; gap:10px; list-style:none; }
+  .groupe li { background:var(--encre); color:var(--sable); padding:6px 14px; border-radius:20px; font-size:.95rem; }
 
-  .contact p { margin-bottom: 14px; }
-  footer { margin-top: 64px; padding: 26px 0; background: var(--encre); color: #b9c7be; text-align: center; font-size: .9rem; }
+  .formation p { margin-bottom:10px; }
+  .formation strong { color:var(--encre); }
+
+  .contact p { margin-bottom:14px; }
+  footer { margin-top:64px; padding:26px 0; background:var(--encre); color:#b9c7be; text-align:center; font-size:.9rem; }
 </style>
 </head>
 <body>
@@ -53,11 +50,11 @@
 <header>
   <div class="wrap">
     <h1>Dandi Gaye Camara</h1>
-    <p class="titre">Développeur Web Junior · React, Node.js, MongoDB</p>
+    <p class="titre">Développeur Web Junior · Support et maintenance informatique</p>
     <p class="lieu">Nouakchott, Mauritanie</p>
     <div class="actions">
       <a class="btn plein" href="#contact">Me contacter</a>
-      <a class="btn vide" href="#projets">Voir mes projets</a>
+      <a class="btn vide" href="#experience">Voir mon expérience</a>
     </div>
   </div>
 </header>
@@ -66,57 +63,73 @@
 
   <section class="propos" id="apropos">
     <h2>À propos</h2>
-    <p>Diplômé en Licence Professionnelle Informatique (GEU L'Académie, Nouakchott), je crée des sites et des applications web complètes : de l'interface avec React jusqu'à la base de données avec Node.js, Express et MongoDB. Je cherche des missions freelance et des opportunités pour construire des outils utiles aux entreprises en Mauritanie et ailleurs.</p>
+    <p>Diplômé en informatique (GEU L'Académie, Nouakchott), je travaille sur le développement web et le support technique. J'ai une expérience chez REMA Broking Mauritanie : développement web, maintenance informatique et mission terrain. Je cherche des missions freelance et une opportunité pour créer des outils utiles aux entreprises.</p>
   </section>
 
-  <section id="projets">
-    <h2>Projets</h2>
-    <div class="projets">
+  <section id="experience">
+    <h2>Expérience</h2>
 
-      <article class="projet">
-        <h3>MauriFoot</h3>
-        <p>Plateforme de réservation de terrains de football en Mauritanie. Les joueurs choisissent un terrain, un créneau et réservent en ligne.</p>
-        <p class="tech">React · Node.js · Express · MongoDB</p>
-        <div class="liens">
-          <a href="https://github.com/dandicamara/maurifoot">Code source</a>
-          <a href="#">Voir le site</a>
-        </div>
-      </article>
+    <article class="poste">
+      <h3>Assistant Technicien Informatique – Support et maintenance</h3>
+      <p class="meta">REMA Broking Mauritanie · Contrat de 3 mois · juin à septembre 2026</p>
+      <ul>
+        <li>Dépannage et configuration des imprimantes et scanners.</li>
+        <li>Diagnostic et résolution des problèmes de connexion entre ordinateurs, imprimantes et scanners.</li>
+        <li>Installation, configuration et mise à jour des pilotes des périphériques.</li>
+        <li>Assistance technique aux utilisateurs et résolution des incidents informatiques.</li>
+      </ul>
+    </article>
 
-      <article class="projet">
-        <h3>StockPro</h3>
-        <p>Application de gestion de stock : produits, entrées, sorties et suivi des quantités.</p>
-        <p class="tech">React · Node.js · Express · MongoDB</p>
-        <div class="liens">
-          <a href="https://github.com/dandicamara/stockpro">Code source</a>
-          <a href="#">Voir le site</a>
-        </div>
-      </article>
+    <article class="poste">
+      <h3>Mission terrain – Collecte et gestion des données prestataires</h3>
+      <p class="meta">REMA Broking Mauritanie · 2 semaines · juillet à août 2026</p>
+      <ul>
+        <li>Géolocalisation des prestataires et collecte des données pour leur référencement.</li>
+        <li>Création de fichiers Excel pour centraliser les informations et faciliter leur intégration dans l'application de l'entreprise.</li>
+        <li>Échanges avec les prestataires pour recueillir leur niveau de satisfaction et remonter les difficultés rencontrées.</li>
+      </ul>
+    </article>
 
-    </div>
+    <article class="poste">
+      <h3>Stagiaire – Développement web</h3>
+      <p class="meta">REMA Broking Mauritanie · mars à mai 2026</p>
+      <ul>
+        <li>Analyse du site web de l'entreprise et identification des dysfonctionnements.</li>
+        <li>Propositions d'amélioration : navigation, témoignages clients, page À propos, version multilingue, reCAPTCHA et FAQ.</li>
+      </ul>
+    </article>
   </section>
 
   <section id="competences">
     <h2>Compétences</h2>
-    <ul class="competences">
-      <li>HTML / CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-      <li>Express</li>
-      <li>MongoDB</li>
-      <li>MySQL</li>
-      <li>Git / GitHub</li>
-    </ul>
+    <div class="competences">
+      <div class="groupe"><h3>Développement web</h3>
+        <ul><li>HTML</li><li>CSS</li><li>PHP</li><li>JavaScript</li></ul></div>
+      <div class="groupe"><h3>Bases de données</h3>
+        <ul><li>MySQL</li><li>MongoDB</li></ul></div>
+      <div class="groupe"><h3>Programmation</h3>
+        <ul><li>Java</li><li>Laravel 11 (en apprentissage)</li></ul></div>
+      <div class="groupe"><h3>Bureautique</h3>
+        <ul><li>Microsoft Word</li><li>Excel</li><li>PowerPoint</li></ul></div>
+      <div class="groupe"><h3>Support technique</h3>
+        <ul><li>Maintenance informatique</li><li>Support technique</li></ul></div>
+    </div>
+  </section>
+
+  <section class="formation" id="formation">
+    <h2>Formation</h2>
+    <p><strong>Licence 3 en Développement Web</strong> · GEU L'Académie, Nouakchott · 2025 – 2026</p>
+    <p><strong>BTS Informatique (2 ans)</strong> · GEU L'Académie, Nouakchott · 2023 – 2025</p>
+    <p><strong>Baccalauréat scientifique</strong> · École Annexe, Nouakchott · 2022 – 2023</p>
   </section>
 
   <section class="contact" id="contact">
     <h2>Contact</h2>
-    <p>Un site à créer, une application à construire ? Écrivez-moi.</p>
+    <p>Un site à créer, un problème technique à résoudre ? Écrivez-moi.</p>
     <div class="actions">
       <a class="btn plein" href="mailto:dandi.gaye.camara@gmail.com">Envoyer un e-mail</a>
-      <a class="btn vide" style="border-color:var(--vert);color:var(--vert)" href="https://wa.me/22241487553">WhatsApp</a>
-      <a class="btn vide" style="border-color:var(--vert);color:var(--vert)" href="https://github.com/dandicamara">GitHub</a>
+      <a class="btn vert" href="https://wa.me/22241487553">WhatsApp</a>
+      <a class="btn vert" href="https://github.com/dandicamara">GitHub</a>
     </div>
   </section>
 
